@@ -6,7 +6,11 @@
   <title>My Luny — A Oitava Maravilha</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
   <style>
-  body {
+  <div class="assinatura-topo">
+    Feito com amor por Nícolas ❤️
+  </div>
+   
+    body {
     background: linear-gradient(to bottom right, #ffe6f0, #e6f7ff);
     font-family: 'Quicksand', sans-serif;
     margin: 0;
@@ -15,7 +19,18 @@
     overflow-y: scroll;
   }
 
-  .coracao {
+    .assinatura-topo {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #993366;
+    margin-top: 20px;
+    font-family: 'Great Vibes', cursive;
+  }
+    
+    
+    
+    
+    .coracao {
     position: fixed;
     animation: subir 4s linear forwards;
     font-size: 30px;
@@ -139,6 +154,25 @@
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   }
+    .final-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.final-section img {
+  width: 200px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.assinatura-final {
+  margin-top: 15px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.6rem;
+  color: #cc6699;
+}
 </style>
 
 </head>
@@ -169,7 +203,7 @@
       <div class="caption">Toda vez que mergulho no brilho dos teus olhos, minha alma dança. Você é minha luz em meio a qualquer escuridão. Eu te amo garota, quero passar o resto da minha vida com tu...</div>
     </div>
     <div class="photo">
-      <img src="fotos/IMG-20250724-WA0011.jpg" alt="Foto 3">
+      <img src="amor2.jpg" alt="Foto 3">
       <div class="caption">Dos mil destinos que eu poderia sonhar, o teu abraço é o único lugar onde eu realmente quero morar.</div>
     </div>
     <div class="photo">
@@ -186,9 +220,10 @@
 </div>
 
   
-  <div class="cinna">
-    <img src="fotos/kuromicinamão.jpeg" alt="Agente no futuro...">
-  </div>
+  <div class="final-section">
+  <img src="fotos/kuromicinamão.jpeg" alt="Assinatura Final">
+  <div class="assinatura-final"> — Nicolas Emanuel, seu admirador...</div>
+</div>
 
   <script>
     function criarCoracao() {
