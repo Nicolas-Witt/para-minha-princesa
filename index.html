@@ -15,7 +15,6 @@
       overflow-y: scroll;
     }
 
-    /* Corações flutuando */
     .coracao {
       position: fixed;
       animation: subir 4s linear forwards;
@@ -64,6 +63,8 @@
       flex-direction: row;
       margin: 30px 0;
       align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .photo:nth-child(even) {
@@ -71,18 +72,20 @@
     }
 
     .photo img {
-      width: 300px;
+      max-width: 90%;
       height: auto;
       border-radius: 20px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      object-fit: cover;
     }
 
     .caption {
       max-width: 300px;
-      margin: 0 20px;
+      margin: 20px;
       font-family: 'Great Vibes', cursive;
       font-size: 1.4em;
       color: #995577;
+      text-align: center;
     }
 
     .cinna {
@@ -122,7 +125,6 @@
 </head>
 <body>
 
-  <!-- Botão de música -->
   <div class="music-button">
     <button onclick="document.getElementById('musica').play()">🎵 Tocar Música</button>
   </div>
@@ -132,7 +134,6 @@
     Seu navegador não suporta o elemento de áudio.
   </audio>
 
-  <!-- Conteúdo principal -->
   <h1>A oitava maravilha do planeta se faz em pessoa...</h1>
   <h2>De um admirador, para meu amor: My Luny...</h2>
 
@@ -143,19 +144,19 @@
   <div class="gallery">
     <div class="photo">
       <img src="fotos/conheci.jpg" alt="Foto 1">
-      <div class="caption">Te conheci minha dama, obrigado por tudo e pela oportunidade de te conhecer, eu vou fazer de tu pra tu meu amor, custe o que custar.</div>
+      <div class="caption">Desde o instante que te conheci, meu coração se aqueceu. Obrigado por existir e permitir que eu faça da tua vida um poema de amor — o nosso.</div>
     </div>
     <div class="photo">
       <img src="fotos/IMG-20250724-WA0010.jpg" alt="Foto 2">
-      <div class="caption">Para cada vez que olho nos seus olhos minha alma sai do meu corpo, tu me ilumina.</div>
+      <div class="caption">Toda vez que mergulho no brilho dos teus olhos, minha alma dança. Você é minha luz em meio a qualquer escuridão.</div>
     </div>
     <div class="photo">
       <img src="fotos/IMG-20250724-WA0011.jpg" alt="Foto 3">
-      <div class="caption">De tantos lugares que desejo conhecer, o calor do seu abraço é o principal que desejo.</div>
+      <div class="caption">Dos mil destinos que eu poderia sonhar, o teu abraço é o único lugar onde eu realmente quero morar.</div>
     </div>
     <div class="photo">
       <img src="fotos/IMG-20250724-WA0006.jpg" alt="Foto 4">
-      <div class="caption">Acredito que para cada princesa, é necessário um príncipe</div>
+      <div class="caption">Toda princesa merece um príncipe... mas você, meu amor, merece o universo inteiro dobrado aos teus pés.</div>
     </div>
   </div>
 
@@ -165,7 +166,6 @@
     <img src="https://i.pinimg.com/originals/0c/34/38/0c3438dc54f3039f4db5f32bdff8e2b8.png" alt="Cinnamoroll">
   </div>
 
-  <!-- Script dos corações -->
   <script>
     function criarCoracao() {
       const coracao = document.createElement('div');
