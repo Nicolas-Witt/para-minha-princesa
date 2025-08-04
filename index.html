@@ -1,55 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Luny — A Oitava Maravilha</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
   <style>
-    /* Fundo animado com corações */
     body {
+      background: linear-gradient(to bottom right, #ffe6f0, #e6f7ff);
+      font-family: 'Quicksand', sans-serif;
       margin: 0;
       padding: 0;
-      font-family: 'Quicksand', sans-serif;
       overflow-x: hidden;
-      background-color: #0d0d0d;
-      position: relative;
+      overflow-y: scroll;
     }
 
-    .heart {
+    /* Corações flutuando */
+    .coracao {
       position: fixed;
-      bottom: -50px;
-      width: 20px;
-      height: 20px;
-      background-color: transparent;
-      background-image: url('https://i.imgur.com/3Wv5yI2.png');
-      background-size: cover;
-      animation: floatUp 6s linear infinite;
-      opacity: 0.7;
+      animation: subir 4s linear forwards;
+      font-size: 30px;
+      color: red;
+      pointer-events: none;
+      z-index: 9999;
     }
 
-    @keyframes floatUp {
+    @keyframes subir {
       0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.7;
+        bottom: 0;
+        opacity: 1;
+        transform: translateY(0);
       }
       100% {
-        transform: translateY(-110vh) scale(1.5);
+        bottom: 100vh;
         opacity: 0;
+        transform: translateY(-100vh);
       }
     }
 
     h1, h2 {
       font-family: 'Great Vibes', cursive;
       text-align: center;
-      color: #ffb6c1;
+      color: #cc6699;
     }
 
     .intro {
       text-align: center;
       margin: 20px;
       font-size: 1.2em;
-      color: #ddd;
+      color: #444;
     }
 
     .gallery {
@@ -75,7 +74,7 @@
       width: 300px;
       height: auto;
       border-radius: 20px;
-      box-shadow: 0 8px 16px rgba(255, 182, 193, 0.4);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
 
     .caption {
@@ -83,7 +82,7 @@
       margin: 0 20px;
       font-family: 'Great Vibes', cursive;
       font-size: 1.4em;
-      color: #ffb6c1;
+      color: #995577;
     }
 
     .cinna {
@@ -106,7 +105,7 @@
 
     .music-button button {
       padding: 10px 20px;
-      background-color: #ff69b4;
+      background-color: #cc6699;
       color: white;
       border: none;
       border-radius: 10px;
@@ -117,36 +116,23 @@
     }
 
     .music-button button:hover {
-      background-color: #e0559c;
+      background-color: #b35588;
     }
   </style>
 </head>
 <body>
 
-  <!-- Corações animados -->
-  <script>
-    function createHearts() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = (3 + Math.random() * 3) + "s";
-      document.body.appendChild(heart);
-      setTimeout(() => {
-        heart.remove();
-      }, 6000);
-    }
-    setInterval(createHearts, 300);
-  </script>
-
+  <!-- Botão de música -->
   <div class="music-button">
     <button onclick="document.getElementById('musica').play()">🎵 Tocar Música</button>
   </div>
 
   <audio id="musica" loop>
-    <source src="Ihabela2.mp3" type="audio/mpeg" />
+    <source src="Ihabela2.mp3" type="audio/mpeg">
     Seu navegador não suporta o elemento de áudio.
   </audio>
 
+  <!-- Conteúdo principal -->
   <h1>A oitava maravilha do planeta se faz em pessoa...</h1>
   <h2>De um admirador, para meu amor: My Luny...</h2>
 
@@ -156,28 +142,43 @@
 
   <div class="gallery">
     <div class="photo">
-      <img src="fotos/conheci.jpg" alt="Foto 1" />
+      <img src="fotos/conheci.jpg" alt="Foto 1">
       <div class="caption">Te conheci minha dama, obrigado por tudo e pela oportunidade de te conhecer, eu vou fazer de tu pra tu meu amor, custe o que custar.</div>
     </div>
     <div class="photo">
-      <img src="fotos/IMG-20250724-WA0010.jpg" alt="Foto 2" />
+      <img src="fotos/IMG-20250724-WA0010.jpg" alt="Foto 2">
       <div class="caption">Para cada vez que olho nos seus olhos minha alma sai do meu corpo, tu me ilumina.</div>
     </div>
     <div class="photo">
-      <img src="fotos/IMG-20250724-WA0011.jpg" alt="Foto 3" />
+      <img src="fotos/IMG-20250724-WA0011.jpg" alt="Foto 3">
       <div class="caption">De tantos lugares que desejo conhecer, o calor do seu abraço é o principal que desejo.</div>
     </div>
     <div class="photo">
-      <img src="fotos/IMG-20250724-WA0006.jpg" alt="Foto 4" />
+      <img src="fotos/IMG-20250724-WA0006.jpg" alt="Foto 4">
       <div class="caption">Acredito que para cada princesa, é necessário um príncipe</div>
     </div>
   </div>
 
   <div class="cinna">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Cinnamoroll.svg/1200px-Cinnamoroll.svg.png" alt="Cinnamoroll" />
-    <img src="https://static.wikia.nocookie.net/sanrio/images/3/3f/Cinnamoroll_transparent.png" alt="Cinnamoroll" />
-    <img src="https://i.pinimg.com/originals/0c/34/38/0c3438dc54f3039f4db5f32bdff8e2b8.png" alt="Cinnamoroll" />
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Cinnamoroll.svg/1200px-Cinnamoroll.svg.png" alt="Cinnamoroll">
+    <img src="https://static.wikia.nocookie.net/sanrio/images/3/3f/Cinnamoroll_transparent.png" alt="Cinnamoroll">
+    <img src="https://i.pinimg.com/originals/0c/34/38/0c3438dc54f3039f4db5f32bdff8e2b8.png" alt="Cinnamoroll">
   </div>
+
+  <!-- Script dos corações -->
+  <script>
+    function criarCoracao() {
+      const coracao = document.createElement('div');
+      coracao.classList.add('coracao');
+      coracao.textContent = '❤️';
+      coracao.style.left = Math.random() * 100 + 'vw';
+      coracao.style.fontSize = (Math.random() * 20 + 20) + 'px';
+      document.body.appendChild(coracao);
+      setTimeout(() => coracao.remove(), 4000);
+    }
+
+    setInterval(criarCoracao, 300);
+  </script>
 
 </body>
 </html>
