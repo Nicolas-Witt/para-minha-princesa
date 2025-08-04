@@ -6,122 +6,141 @@
   <title>My Luny — A Oitava Maravilha</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
   <style>
-    body {
-      background: linear-gradient(to bottom right, #ffe6f0, #e6f7ff);
-      font-family: 'Quicksand', sans-serif;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      overflow-y: scroll;
-    }
+  body {
+    background: linear-gradient(to bottom right, #ffe6f0, #e6f7ff);
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 
-    .coracao {
-      position: fixed;
-      animation: subir 4s linear forwards;
-      font-size: 30px;
-      color: red;
-      pointer-events: none;
-      z-index: 9999;
-    }
+  .coracao {
+    position: fixed;
+    animation: subir 4s linear forwards;
+    font-size: 30px;
+    color: red;
+    pointer-events: none;
+    z-index: 9999;
+  }
 
-    @keyframes subir {
-      0% {
-        bottom: 0;
-        opacity: 1;
-        transform: translateY(0);
-      }
-      100% {
-        bottom: 100vh;
-        opacity: 0;
-        transform: translateY(-100vh);
-      }
+  @keyframes subir {
+    0% {
+      bottom: 0;
+      opacity: 1;
+      transform: translateY(0);
     }
+    100% {
+      bottom: 100vh;
+      opacity: 0;
+      transform: translateY(-100vh);
+    }
+  }
 
-    h1, h2 {
-      font-family: 'Great Vibes', cursive;
-      text-align: center;
-      color: #cc6699;
-    }
+  h1, h2 {
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    color: #cc6699;
+    font-size: 2.4rem;
+    line-height: 1.4;
+  }
 
-    .intro {
-      text-align: center;
-      margin: 20px;
-      font-size: 1.2em;
-      color: #444;
-    }
+  .intro {
+    text-align: center;
+    margin: 20px;
+    font-size: 1.6rem;
+    color: #444;
+    font-style: italic;
+  }
 
-    .gallery {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 20px auto;
-      max-width: 800px;
-    }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 800px;
+  }
 
-    .photo {
-      display: flex;
-      flex-direction: row;
-      margin: 30px 0;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+  .photo {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .photo:nth-child(even) {
-      flex-direction: row-reverse;
-    }
+  .photo:nth-child(even) {
+    flex-direction: row-reverse;
+  }
 
-    .photo img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      object-fit: cover;
-    }
+  .photo img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    object-fit: cover;
+  }
 
-    .caption {
-      max-width: 300px;
-      margin: 20px;
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.4em;
-      color: #995577;
-      text-align: center;
-    }
+  .caption {
+    max-width: 500px;
+    margin: 20px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #995577;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+  }
 
-    .cinna {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin: 40px 0;
-    }
+  .cinna {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
 
-    .cinna img {
-      width: 120px;
-      height: auto;
-    }
+  .cinna img {
+    width: 120px;
+    height: auto;
+  }
 
-    .music-button {
-      text-align: center;
-      margin: 30px 0;
-    }
+  .music-button {
+    text-align: center;
+    margin: 30px 0;
+  }
 
-    .music-button button {
-      padding: 10px 20px;
-      background-color: #cc6699;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-family: 'Quicksand', sans-serif;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+  .music-button button {
+    padding: 10px 20px;
+    background-color: #cc6699;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-    .music-button button:hover {
-      background-color: #b35588;
-    }
-  </style>
+  .music-button button:hover {
+    background-color: #b35588;
+  }
+
+  .video-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+
+  .video-section video {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+</style>
+
 </head>
 <body>
 
@@ -163,7 +182,7 @@
       </video>
     </div>
 
-    <div class="caption">Eu vou te esperar pra te ter nem que seja a última coisa que eu faça, pra te falar "Eu te AMO" todo dia.</div>
+    <div class="caption">Eu vou te esperar pra te ter nem que seja a última coisa que eu faça, pra te falar "Eu te amo" todo dia.</div>
 </div>
 
   
